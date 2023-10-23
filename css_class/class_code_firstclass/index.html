@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .big {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+    <style type="text/css">
+        /* 内部样式表，可以分开定义,定义在body里面也没事，可以应用在一个页面的多个标签 */
+        img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10%;
+        }
+        p{
+            width: 50;
+            height: 50;
+            background-color: lightgreen;
+        }
+        .blue-p {
+            /* 选出所有.blue-p的标签 */
+            background-color: lightblue;
+        }
+        
+        
+    </style> -->
+    <!-- 使用外部样式表 ,后面的样式会把前面的样式覆盖掉(若有一样的)-->
+    <!-- <link rel="stylesheet" href="/static/css/class_code/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/class_code/style2.css" type="text/css"> -->
+    <link rel="stylesheet" href="/static/css/class_code/style3.css">
+
+
+</head>
+<body>
+    <!-- css方法 -->
+    <!-- 行内样式表，只能修改某一个标签 -->
+    <img  src="/static/images/7A788E007B6F935F42430F3BF5C16451.jpg" alt="" style="width: 40%;">
+    <div style="width: 50%; height: 300px; background-color: lightblue;"></div>
+    <div>斋藤飞鸟</div>
+    <!-- 在head里面定义style标签可以控制很多标签 -->
+    <img src="/static/images/QQ图片20230228185757.jpg" alt="">
+    <img src="/static/images/微信图片_20230610211301.jpg" alt="">
+    <img src="/static/images/微信图片_20230610211254.jpg" alt="">
+    <!-- 演示特定几个样式 -->
+    <p class="blue-p">1</p>
+    <p class="big">2</p>
+    <p class="blue-p big">3</p>
+    <!-- 选择器作用是很方便的选择想要选择的标签 -->
+    <div class="red-tag big-tag">div 1</div>
+    <div class="effect">div 2</div>
+    <div>div 3</div>
+    <div>div 4</div>
+
+    <p>1</p>
+    <p>2</p>
+    <!-- id一般不重复class一般可以重复而且多个 -->
+    <p id="myp">3</p>
+    <p>4</p>
+    
+    <a href="/html_class/class_code/class2.html">class2</a>
+    <button>about</button>
+    <!-- 光标聚焦 -->
+    <input type="text" name="" id="">
+    <!-- 位置伪类选择器 -->
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <!-- 目标选择器 -->
+    <!-- 连接到页面内 -->
+    <a href="#myp"></a>
+    <p>p 1</p>
+    <p>p 2</p>
+    <p>p 3</p>
+    <p id="myp">p 4</p>
+    <p>p 5</p>
+    <p>p 6</p>
+    <!-- 复合选择器 多个类共用同一种状态 -->
+    <p>p 1</p>
+    <p>p 2</p>
+    <p>p 3</p>
+    <p>p 4</p>
+    <p>p 5</p>
+    <p class="big">p 6</p>
+    <div class="big">big</div>
+    <ul>
+        <li>1
+            <ul>
+                <li>
+                    1.1
+                </li>
+                <li>
+                    1.2
+                </li>
+                <li>
+                    1.3
+                </li>
+            </ul>
+        </li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <input type="text" required name = "" id="">
+    <input type="text" name="" id="">
+    <p><span>锄</span>禾日当午</p>
+    <p><span>汗</span>滴禾下土</p>
+    <p>锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦
+        锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦
+        锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦
+    </p>
+
+</body>
+</html>

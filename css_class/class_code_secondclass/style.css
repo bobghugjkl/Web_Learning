@@ -1,0 +1,124 @@
+/* 文本css */
+h4 {
+    text-align: center;
+}
+.mydiv {
+    /* 左对齐 */
+    text-align: justify;
+    /* font-size: 20px; */
+    font-size: 200%;
+    width: 50vw;
+    height: 50ch;
+    /* 可以用行高实现居中 */
+    line-height: 1em;
+    /* 字体宽度 */
+    letter-spacing: 1.5em;
+    /* 缩进 */
+    text-indent: 3em;
+}
+/* 文字是可以继承的，如果父标签有字标签可以继承 */
+/* 
+px:设备上的像素点,是绝对值
+%:相对于父元素的百分比
+em:相对于当前元素的字体大小的长度
+rem:相对于根元素的字体大小
+vw:相当于视觉宽度的百分之一
+ch:视觉高度的......
+*/
+.mydiv > p:nth-child(1){
+    /* 上一级是.mydiv并且是p的第一个儿子 */
+    /* 下划线什么的 */
+    text-decoration: azure;
+    /* 字体css */
+    font-size: 1.5rem;
+    /* 斜体 */
+    font-style: italic;
+    /* 粗体 */
+    font-weight: lighter;
+    /* 字体 */
+    font-family: sans-serif;
+}
+/* 去除下划线,专门用于超链接什么的 */
+a {
+    text-decoration: none;
+    /* 模糊,向x方向模糊多少(右边)向y方向模糊多少(下面)模糊半径模糊颜色 */
+    /* 从文档上面搜 */
+    text-shadow: 5px,10px,2px,gray;
+}
+/* 背景 */
+.mydiv{
+    height: 200px;
+    height: 200px;
+    background-image: url('/static/images/7A788E007B6F935F42430F3BF5C16451.jpg'),url('/static/images/微信图片_20230610211301.jpg');
+    /* 左边优先级高 */
+    /* 里面有很多属性,看mdn官网! */
+    /* 也可以用百分比来写 */
+    background-size: 100px 200px, 100px,200px;
+    /* 不希望重复 */
+    background-repeat: no-repeat;
+    /* 渐变色做背景 */
+    background-image: linear-gradient(rgba(0,0,255,0.5),rgba(255,255,0,0.5));
+    /* 向右偏移,向下偏移,看文档发现其用法 */
+    background-position: left top, 100px top;
+    /* 跟着页面一起滚动 */
+    /* background-attachment: scroll; */
+    /* 图片默认处于div在顶端的位置,不随着滚动 */
+    background-attachment: fixed;
+
+}
+.mydiv > div {
+    height: 100px;
+    width: 100px;
+    /* 最后是透明度 */
+    background-color: rgba(0,0,255,0.5);
+    /* 透明度 */
+    opacity: 0.2;
+}
+/* 边框 */
+div {
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    /* 点线 */
+    /* 看MDN文档 */
+    /* 上右下左 */
+    border-style: solid solid solid solid;
+    border-width: 5px 4px 2px 1px;
+    border-color: red blue green orange;
+    /* 半径 */
+    border-radius: 5px 0 0 0;
+    margin: 10px;
+    padding: 20px;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 设置一个输出效果，怎么输入的怎么输出,也就相当于pre标签 */
+    white-space: pre;
+    /* 比较智能的auto，直接隐藏用hidden */
+    overflow: auto;
+    /* 超出部分省略号 */
+    text-overflow: ellipsis;
+    /* 横竖都是滚轮 */
+    overflow: scroll;
+    /* 单纯横向 */
+    overflow-x: scroll;
+}
+td {
+    border-style: solid;
+    width: 20px;
+    height: 20px;
+}
+/* div中加display:inline即可变成span */
+table {
+    border-style: solid;
+    /* 让他们紧挨着 */
+    border-collapse: collapse;
+}
+/* 元素展示格式 */
+span {
+    background-color: lightblue;
+    width: 100px;
+    height: 200px;
+    /* 外边距，上下左右都有 */
+    margin: 10px;
+    display: inline-block;
+}

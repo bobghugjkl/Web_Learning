@@ -1,0 +1,134 @@
+.container{
+    background-color: grey;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+}
+/* .card{
+    width: 80%;
+    height: 100vh;
+    background-color: blueviolet;
+    margin: 0 auto;
+}*/
+/* 判断是小型屏幕还是中型屏幕什么的 */
+/* @media (min-width: 768px){
+    .card{
+        background-color: lawngreen;
+    }
+}  */
+.col{
+    width: 33.33%;
+    float: left;
+    height: 100px;
+    background-color: lightpink;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 30px;
+    text-align: center;
+    /* 高度和整个块一样可以居中 */
+    line-height: 100px;
+}
+/* 根据不同的面板大小，可以分成xs,sm,md,lg,xl等 */
+@media(min-width: 768px){
+    .col-md-1 {
+            /* 表示中等的占一份 */
+            width: 8.33333%
+        }
+    
+        .col-md-2 {
+            width: 16.66667%;
+        }
+    
+        .col-md-3 {
+            width: 25%;
+        }
+    
+        .col-md-4 {
+            width: 33.333333%;
+    
+        }
+    
+        .col-md-5 {
+            width: 41.666667%;
+        }
+    
+        .col-md-6 {
+            width: 50%;
+        }
+    
+        .col-md-7 {
+            width: 58.333333%;
+        }
+    
+        .col-md-8 {
+            width: 66.666666667%;
+        }
+    
+        .col-md-9 {
+            width: 75%;
+        }
+    
+        .col-md-10 {
+            width: 83.33333%;
+        }
+    
+        .col-md-11 {
+            width: 91.6666667%;
+        }
+    
+        .col-md-12 {
+            width: 100%;
+        }
+}
+@media(max-width:767px ){
+    .col-ms-1 {
+            /* 表示中等的占一份 */
+            width: 8.33333%
+        }
+    
+        .col-ms-2 {
+            width: 16.66667%;
+        }
+    
+        .col-ms-3 {
+            width: 25%;
+        }
+    
+        .col-ms-4 {
+            width: 33.333333%;
+    
+        }
+    
+        .col-ms-5 {
+            width: 41.666667%;
+        }
+    
+        .col-ms-6 {
+            width: 50%;
+        }
+    
+        .col-ms-7 {
+            width: 58.333333%;
+        }
+    
+        .col-ms-8 {
+            width: 66.666666667%;
+        }
+    
+        .col-ms-9 {
+            width: 75%;
+        }
+    
+        .col-ms-10 {
+            width: 83.33333%;
+        }
+    
+        .col-ms-11 {
+            width: calc(100% * 11 / 12);
+        }
+    
+        .col-ms-12 {
+            width: 100%;
+        }
+}

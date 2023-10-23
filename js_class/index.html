@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入js文件方式 -->
+    <script type="module" src="/js_class/index.js"></script>
+    <link rel="stylesheet" href="/js_class/index.css">
+</head>
+<body>
+    <!-- 调用js的时候在任意地方都可以加上这个标签,没有type类似全局变量不推荐 -->
+    <script type="module">
+        //常量
+        const y = 10;
+        //变量
+        let x = 3;
+        // printf in F12
+        console.log(x);
+        // 引用index.js里面export里面的东西
+        import {name,print} from "/js_class/index.js";
+        import {print_x} from "/js_class/index2.js";
+        console.log(name);
+        //对象，相当于python里面的字典
+        let d = {
+            name: "lrs",
+            age: 18
+        }
+        //输出类型
+        console.log(typeof x);
+        // 字符串里的值不可改变
+        let s1 = "acwing";
+        let s3 = s1.substr(0,1) + 'X' + s1.substr(2);
+        console.log(s3);
+        //Object对象，类似于指针
+        let m = {
+            name: "yxc",
+            age: 18,
+        };
+        console.log(m["name"], d["age"]);
+        console.log(d.age, d.name);
+        let key = name;
+        console.log(m.key);
+        //加值
+        m['scool'] = "bjdx";
+        m.x = "男";
+        console.log(m.scool, m.x);
+        delete d.age;
+        for (let key in m){
+            console.log(key);
+        }
+        //取整
+        console.log(parseInt(5/3));
+        //乘方
+        console.log(2**10);
+        //等于
+        console.log("1" === 1);
+        
+    </script>
+    <textarea class="input" name="" id="" cols="30" rows="10"></textarea>
+    <br>
+    <button>run</button>
+    <br>
+    <pre></pre>
+    <script type="module">
+        //输入
+        import {main} from "/js_class/index3.js";
+        main();
+    </script>
+</body>
+</html>

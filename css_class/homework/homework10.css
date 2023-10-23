@@ -1,0 +1,37 @@
+.container{
+    /* flex布局 */
+    display: flex;
+    width: 50%;
+    height: 500px;
+    background-color: lightblue;
+    margin: 10px;
+}
+.container > div{
+    width: 120px;
+    height: 120px;
+}
+.container>div:nth-child(0dd){
+    background-color: lightcoral;
+}
+.container>div:nth-child(even){
+    background-color: lightgreen;
+    
+}
+.container:nth-child(1){
+    /* 自动换行 */
+    flex-wrap: wrap;
+/* 同一行所有元素的对齐方式 均匀分开*/
+    justify-content: space-between;
+    /* 紧贴,但其实可以手动加 */
+    align-content: flex-start;
+}
+.container:nth-child(2){
+    /* 从右到左枚举 */
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+.container:nth-child(2)>div:nth-child(odd){
+    /* 增加和减少速度 */
+    flex-grow: 3;
+    flex-shrink: 3;
+}

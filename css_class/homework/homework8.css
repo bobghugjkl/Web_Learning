@@ -1,0 +1,23 @@
+.body{
+    height: 2000px;
+}
+.div{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 20px;
+}
+.div:nth-child(1){
+    position: static;
+}
+.div:nth-child(2){
+    position: relative;
+    left: 50px;
+    top: 15px;
+}
+.div:nth-child(3){
+    position: absolute;
+    background-color: black;
+    left: 30px;
+    top: 30px;
+}

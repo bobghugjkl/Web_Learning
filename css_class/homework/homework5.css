@@ -1,0 +1,17 @@
+.container{
+    display: block;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin: 20px;
+    background-color: lightblue;
+}
+.inline-block-div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    background-color: blue;
+    color: white;
+}

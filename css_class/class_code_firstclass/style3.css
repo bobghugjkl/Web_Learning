@@ -1,0 +1,160 @@
+/* 标签选择器 */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+    /* 预间距 */
+    margin-bottom: 10px;
+}
+p {
+    width: 50px;
+    height: 70px;
+    background-color: limegreen;
+}
+/* id选择器 */
+#mydiv{
+    background-color: paleturquoise;
+}
+#myp{
+    background-color: lightskyblue;
+}
+/* 类选择器 */
+.red-tag{
+    background-color: red;
+}
+.big-tag{
+    width: 180px;
+    height: 180px;
+}
+/* 伪类选择器，很灵活 */
+/* 鼠标放上面后会怎么样 */
+.effect:hover{
+    /* 放大1.2倍 */
+    transform: scale(1.2);
+    /* 用时 */
+    transition: 200ms;
+}
+#mydiv:hover{
+    background-color: lawngreen;
+}
+a:link{
+    /* 超链接没有访问前的状态 */
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    /* 鼠标悬停状态 */
+    color: orange;
+}
+a:active{
+    /* 点击时 */
+    color: purple;
+}
+/* button也一样 */
+button:hover{
+    color: aquamarine;
+}
+button:active{
+    color: wheat;
+    background-color: chartreuse;
+}
+/* 聚焦 */
+input{
+    width: 50px;
+}
+input:focus{
+    background-color: lightblue;
+}
+input:hover{
+    transform: scale(1.2);
+    width: 100px;
+}
+/* 位置伪类选择器 */
+/* p:nth-child(2){
+这里选择了第二个p的状态，找p父节点的第二个儿子(不是第几个p！)，同样也是一个状态，返回一个bool值 
+    background-color: lightblue;
+} */
+/* 可以写进去一个函数 */
+p:nth-child(2n+1) {
+/* odd奇数变蓝,even偶数变蓝,3n三的倍数全部变蓝 */
+    background-color: lightblue;
+}
+/* 目标选择器 url指向该目标时成立 */
+p:target{
+    /* 是否被指向 */
+    transform: scale(1.2);
+    color: orange;
+    transition: 3ms;
+}
+/* 复合转换器 多个类，标签共用一种状态，伪类标签也可以用*/
+div,p:hover{
+    background-color: antiquewhite;
+}
+div.big{
+    /* .指必须同时存在也可以一直加点什么的 */
+    /* 只会影响div的 */
+    transform: scale(1.2);
+}
+div+p{
+    /* 满足p紧跟在div后面才改变样式 */
+    background-color: cornsilk;
+}
+#myp+p{
+    background-color: aquamarine;
+}
+
+ul ul{
+    /* 如果ul有一个祖先节点是ul会触发 */
+    color: brown;
+}
+
+ul > ul{
+    /* ul父节点是ul */
+    color: aqua;
+}
+li > ul > li{
+    color: aliceblue;
+}
+/* 用贪心的方法匹配 */
+/* 通配符 */
+*{
+    /* 选择所有的标签 */
+    font-size: 2em;
+}
+input[required]{
+    /* 具有require标签 */
+    background-color: grey;
+}
+input[type=text] {
+    /* 具有require标签 */
+    background-color: grey;
+}
+/* 伪元素选择器，将特定的区域放到一个假想的标签里然后设置一些样式 */
+p::first-letter{
+    /* 第一个字符拿出来 */
+    color: red;
+}
+p::first-line{
+    /* 第一行 */
+    color: aquamarine;
+}
+p::selection{
+    color: yellow;
+    background-color: blueviolet;
+}
+h1::before{
+    /* 前面加上左书名号 */
+    content:"<<";
+}
+h1::after{
+    content: ">>";
+}
+/* 越具体的选择器权重越高，越容易被渲染后面加上!important可以让优先级变成最高 */
+/* 颜色的表示
+    1.red green blue三种颜色每两个空换一种#0x（红色）FF（绿色）28（蓝色）
+    2.rgb表示法，括号里面是数字,第四个空是透明度
+    3.f12在网页中找颜色，ctrl+shift+c
+    4.qq截图工具，光标放在颜色上面会有rgb的数字，按c可以复制色号，按住ctrl键换成16进制
+    */

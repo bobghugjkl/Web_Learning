@@ -1,0 +1,42 @@
+.div-flex{
+    width: 50%;
+    height: 500px;
+    background-color: lightcoral;
+    display: flex;
+    /* flex-direction: column; */
+    /* 自动换行且换行顺序 */
+    /* flex-wrap: wrap-reverse; */
+    /* 间距 */
+    justify-content: space-around;
+    /* 对齐有距离 */
+    /* align-items: stretch; */
+    /* 对齐无距离，且一行时居中效果会消失 */
+    align-content: center;
+    /* 之前的竖直居中：
+        position:relative;
+        top:50%;
+        transform:translateY(-50%);
+        现在只需要把display改成flex,然后justify-content改成center,align-item搞成center
+    */
+}
+.div-flex-item{
+    width: 100px;
+    height: 100px;
+    /* 等比例放大,缩小是shrink */
+    /* flex-grow: 1; */
+    flex: auto;
+}
+/* 所有奇数的块 */
+.div-flex-item:nth-child(odd){
+    background-color: lightblue;
+    /* 放映顺序 */
+    /* order: 1;
+    flex-grow: 3;
+    flex-shrink: 3; */
+}
+.div-flex-item:nth-child(even){
+    background-color: lightgreen;
+    /* order: 2;
+    flex-grow: 1;
+    flex-shrink: 3; */
+}

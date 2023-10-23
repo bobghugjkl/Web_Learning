@@ -1,0 +1,72 @@
+.div-outer{
+    width: 3000px;
+    height: 3000px;
+    background-color: lightblue;
+    margin: 50px;
+    /* 不改变大小而且还可以让子元素不带着父元素走 */
+    overflow: hidden;
+}
+.div-outer::before{
+    /* 不影响其他属性的情况下达到overflow:hidden的效果,在父类前面加上一个隐藏元素 */
+    content: "";
+    display: table;
+}
+.div-inner {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* 不包括上面的边距 margin: 10px; 
+    margin: 10px 20px 3px 4px;
+     百分比也可以(只不过是根据父元素，在这里父元素是body的长宽来确定的),auto也可以,但只能实现水平居中，上下居中实现不了 
+    margin: 20px auto;*/
+    /* margin-bottom: 20px; */
+    /* 让他们变到同一行 */
+    /* float: left; */
+    color: whitesmoke;
+    /* padding: 20px 0 0 10%; */
+    position: sticky;
+    float: left;
+    top: 0;
+    /* box-sizing: border-box; */
+    /* 行内元素，这行不够再放下一行 */
+    /* display: inline-block; */
+}
+.div-inner-2{
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    /* margin-top: 30px; */
+    color: white;
+    /* 默认盒子：内容盒子 */
+    /* box-sizing: content-box; */
+    /* display: inline-block; */
+    /* 可进行相对漂移,也可以控制在屏外的是否覆盖，index值越大优先级越高，除static之外有效 */
+    /* position: relative; */
+    /* z-index: 2;
+    top: 30px; */
+    /* 浮动只把左边的间隔去掉 */
+    float: left;
+}
+/* 元素大小和内边距相关，都会加上内边距
+默认盒子模型：width=content+padding+border
+另外的：border-box(只会挤压内部空间)
+*/
+/* 位置 position位置*/
+.div-inner-3{
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    color: white;
+    /* margin-top: 30px; */
+    /* 默认盒子：内容盒子 */
+    /* box-sizing: content-box; */
+    /* display: inline-block; */
+    /* 相对文档有漂移量 ,对第一个非static（父节点的position项）的物块进行漂移（向上面找找到第一个，祖宗节点什么的）*/
+    /* 绝对定位：会先把文件从文件流中提出去，位置会被定位，fixed是固定定位，定义与绝对定位差不多但是固定不随滚轮的滑动而滑动 sticky粘性定位，当还没有走到他的位置时不固定，走到了就固定*/
+    /* position: absolute;
+    top: 30px;
+    left: 100px; */
+    position: sticky;
+    float: left;
+}
+/* 浮动：一行撑不下的时候自动换行，==display:inline-block */

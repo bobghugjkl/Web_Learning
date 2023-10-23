@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<!--第一行一般都是文件类型，叫html-->
+
+<!--根标签一般都是html,里面有一般有两个标签：head和body-->
+<html>
+    <head>
+        <!--里面存所有配置相关的内容，样式文件，css等-->
+        <title>
+            Acwing-web应用课
+        </title>
+        <!--不能存在常用标签里的，比如stale，css样式文件，字符集（utf-8）等可以装到meta里面-->
+        <meta charset="UTF-8">
+        <!--小标题description-->
+        <meta name="description" content="一个小项目">
+        <!--keywords搜索的时候可以搜索到-->
+        <meta name="keywords" content="项目，自学，第一个">
+        <!--logo的写法-->
+        <link rel="icon" href="/images/QQ图片20230228185757.jpg">
+    </head>
+    <body>
+        <!--所有不是head里面的-->
+        <h1>hello world</h1>
+        <!-- div就是一块一块的代码块，可以对整体进行操作，是块状元素，与span(行内元素)相对，后面默认带回车 -->
+        
+        <!-- <pre>可以体现回车效果（以在vs里面的格式输出）等宽字体，<ul>列表元素,<ol>有序列表，<table>表格 <I>斜线，<b>加粗...... -->
+        <!-- <p>一段 ，加行间距-->
+        <!-- 图片若有多个,一行存不下会自动换行 ,后面不可以接div性质标签-->
+        <img width="300" height="400" src="/images/QQ图片20230228185757.jpg" alt="图片">
+        <h1>Audios</h1>
+        <!-- 以下是插入音频的几个方法 -->
+        <audio controls src="/audios/bgm.mp3">无法播放</audio>
+        <audio controls>
+            <!-- 如果第一个不可以播放那就第二个 ,type是格式-->
+            <source src="/audios/chat_message_recevied.mp3"type="audio/mpeg">
+            <source src="/audios/chat_message_recevied2.mp3"type="audio/mpeg">
+        </audio>
+        <!-- 以下是插入视频的几种方法 -->
+        <!-- 可以再MDN上搜索video解锁更多控制用法！ -->
+        <h1>video</h1>
+        <video controls width="300" src="/video/video1.mp4"></video>
+        <video autoplay width="300" src="/video/video2.mp4"></video>
+        <br>
+        <video width="300" controls>
+            <source src="/video/video2.mp4" type="video/mp4">
+            <source src="/video/video1.mp4" type="video/mp4">
+        </video>
+        <h1>超链接</h1>
+        <!-- 需要写http协议，然后如果要跳到站内则需要新建一个html文件 -->
+        <a href="https://www.acwing.com" target="_blank">
+            Acwing
+            <img>
+        </a>
+        <a href="/about.html">about</a>
+        <!-- 表单与后端服务器交互，用户名邮箱密码,action填的是一个地址，是个后端函数,或者是一个链接(先发给服务器然后给表单) -->
+        <h2>Form</h2>
+        <!--<form action=""></form>-->
+        <form action="/about.html">
+            <!-- input会有很多种，可以上mdn搜索相应的用法，一般都会绑定属性，打标签，绑定label通过id来绑定，但是只能有一个id -->
+            <label for="username"></label>
+            <input placeholder="用户名" type="text" maxlength="10" name="username" id="username">
+            <br>
+            <label for="age"></label>
+            <input placeholder="年龄" type="number" minlength="2" name="age" id="age">
+            <br>
+            <label for="email"></label>
+            <input placeholder="邮箱" required type="email" name="email" id="email">
+            <br>
+            <label for="password"></label>
+            <input placeholder="密码" type="password" name="password" id="password">
+            <br>
+            <!-- 一组相同的name里面只能选一个 -->
+            <label for="cpp">cpp</label>
+            <input type="radio" name="lang" value="cpp" id="cpp">
+            <br>
+            <label for="java">java</label>
+            <input type="radio" name="lang" value="java" id="java">
+            <br>
+            <label for="python">python</label>
+            <input type="radio" name="方言" value="python" id="python">
+            <input type="file" name="" id="">
+            <br>
+            <!-- cols:行 rows:列 -->
+            <label for="resume">用户名</label>
+            <textarea name="resume" id="resume" cols="30" rows="10"></textarea>
+            <label for="lang">语言</label>
+            <select name="lang" id="lang">
+                <option value=""></option>
+                <option selected value="Cpp">Cpp</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+            <!-- 提交按钮 -->
+            <!-- 提交后看网站上的地址，？号后面的就是向后端传的东西（传等号两边的）,传的是name参数 -->
+            <br>
+            <button type="submit">提交</button>
+            
+        </form>
+    </body>
+
+</html>
